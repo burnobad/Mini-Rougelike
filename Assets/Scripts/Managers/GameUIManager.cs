@@ -9,18 +9,27 @@ public class GameUIManager : MonoBehaviour
 
     [SerializeField]
     private CanvasGroup gameOverScreen;
+
+    [SerializeField]
+    private CanvasGroup controllsOverlay;
     private void Start()
     {
         GameEventsManager.AddLevelEvent += AddLevel;
         GameEventsManager.UpgradeChosenEvent += UpgradeChosen;
         GameEventsManager.GameOverEvent += GameOver;
         GameEventsManager.RestartGame += RestartGame;
+        GameEventsManager.GameStarted += GameStarted;
     }
 
+    private void GameStarted()
+    {
+        CloseScreen(controllsOverlay);
+    }
     private void RestartGame()
     {
         CloseScreen(selectUpgScreen);
         CloseScreen(gameOverScreen);
+        ShowScreen(controllsOverlay);
     }
     private void AddLevel(Upgrades[] _availableUpgrades)
     {

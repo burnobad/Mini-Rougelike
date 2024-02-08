@@ -16,6 +16,7 @@ public class GameEventsManager
     public static LevelProgDelegate UpdateLevelData;
 
     public static ObjDelegate DealDamageEvent;
+    public static VoidDelegate GameStarted;
     public static VoidDelegate GameOverEvent;
     public static VoidDelegate RestartGame;
 

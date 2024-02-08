@@ -112,7 +112,7 @@ public class PlayerController : InteractableObject
 
         moveDir = new Vector2(horInput, vertInput).normalized;
 
-        if(Input.GetMouseButton(0))
+        if(Input.GetMouseButton(0) && WorldData.Instance.gameStarted)
         {
             shootButtonPress = true;
         }
@@ -150,7 +150,10 @@ public class PlayerController : InteractableObject
 
     protected override void IObjFixedUpdate()
     {
-        mouseRotParent.transform.up = WorldData.Instance.GetDirToMouse(mouseRotParent);;
+        if(WorldData.Instance.gameStarted)
+        {
+            mouseRotParent.transform.up = WorldData.Instance.GetDirToMouse(mouseRotParent);
+        }
 
         if (CanDash() && !isDashing)
         {

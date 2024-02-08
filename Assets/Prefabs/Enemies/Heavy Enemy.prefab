@@ -113,9 +113,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2336328053839352504}
   - component: {fileID: 7535881763610266965}
-  - component: {fileID: 861998985832431387}
+  - component: {fileID: 8025938813355631537}
   m_Layer: 10
-  m_Name: DashEnemy
+  m_Name: Heavy Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -165,7 +165,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &861998985832431387
+--- !u!114 &8025938813355631537
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,16 +174,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4412040185811875367}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c1e396f9cc055e478fef6467bff0dce, type: 3}
+  m_Script: {fileID: 11500000, guid: e8604a532f751204b954284759fe5cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 7535881763610266965}
   charModel: {fileID: 2717730637496591080}
-  defaultMoveSpeed: 7
-  maxHealth: 3
+  defaultMoveSpeed: 6
+  maxHealth: 15
   spawnSlider: {fileID: 5270639827959357785}
-  dangerLevel: 3
-  dashForce: 26
+  dangerLevel: 8
 --- !u!1 &4896133415167821550
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2717730637496591080}
   - component: {fileID: 4040805143911361107}
-  - component: {fileID: 4073798790151556139}
+  - component: {fileID: 8679378611240200364}
   - component: {fileID: 1834925053612406761}
   m_Layer: 10
   m_Name: Model
@@ -364,7 +363,7 @@ Transform:
   m_GameObject: {fileID: 5417087284769701382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1.25, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2336328053839352504}
@@ -411,8 +410,8 @@ SpriteRenderer:
   m_SortingLayerID: 1346740215
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 3306330b9fce78642bf0e6668ce69cb0, type: 3}
-  m_Color: {r: 0.6981132, g: 0.05201628, b: 0, a: 1}
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 0.3301887, g: 0.024602296, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -422,8 +421,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &4073798790151556139
-PolygonCollider2D:
+--- !u!61 &8679378611240200364
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -457,19 +456,16 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
-  m_UseDelaunayMesh: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &1834925053612406761
 MonoBehaviour:
   m_ObjectHideFlags: 0

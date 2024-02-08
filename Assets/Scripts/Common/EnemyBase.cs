@@ -17,6 +17,11 @@ public class EnemyBase : InteractableObject
 
     protected bool canBeSlowedDown;
 
+    [SerializeField]
+    protected int dangerLevel;
+    public int DangerLevel
+    { get { return dangerLevel; } }
+
     protected override void IOjOnEnable()
     {
         base.IOjOnEnable();

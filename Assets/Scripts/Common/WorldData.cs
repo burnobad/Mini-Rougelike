@@ -9,6 +9,8 @@ public class WorldData : MonoBehaviour
     public static WorldData Instance
     { get { return instace; } }
 
+    public bool gameStarted = false;
+
     [SerializeField]
     private PlayerController player;
 

@@ -127,7 +127,7 @@ public class SelectUpgradeManager : MonoBehaviour
                 upgDescText.text = "Increases move speed";
                 break;
             case Upgrades.EnemyDeathBullets:
-                upgNameText.text = "Enemy Death Bullets";
+                upgNameText.text = "[EXPLOSION]";
                 upgDescText.text = "Enemies explode with bullets on death";
                 break;
             case Upgrades.DashRechargeTime:
@@ -135,7 +135,7 @@ public class SelectUpgradeManager : MonoBehaviour
                 upgDescText.text = "Decreases dash recharge time";
                 break;
             case Upgrades.SlowDownZone:
-                upgNameText.text = "Creates Slow Down Zone";
+                upgNameText.text = "[SNOW KING CROWN]";
                 upgDescText.text = "Creates a zone, that decreases enemy speed";
                 break;
         }

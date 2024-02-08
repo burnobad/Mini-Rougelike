@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public enum ObjectPoolTypes { None, TestEnemy, DashEnemy, UpgragePickUp, PlayerBullet}
+public enum ObjectPoolTypes { None, TestEnemy, DashEnemy, HeavyEnemy, UpgragePickUp, PlayerBullet}
 public class ObjectPoolsManager : MonoBehaviour
 {
     private static ObjectPoolsManager instance;
